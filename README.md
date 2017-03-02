@@ -6,13 +6,20 @@
 
 
 ### 環境構築
-以下のwatirのコマンドで最新版watirのweb-driverをインストールする。
+watirのgemをインストールする。
 
 ```
 gem install watir
 ```
 
-###　ダウンロード
+Google chromeのweb-driverをインストールする。
+
+```
+brew install chromedriver
+```
+
+
+### 画像ダウンロード
 以下のコマンドで、指定したキーワードを元に、google画像検索結果上位100件をダウンロードする。
 
 ```
