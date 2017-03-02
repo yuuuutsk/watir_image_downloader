@@ -5,7 +5,7 @@ keyword = ARGV[0]
 n_images = ARGV[1].to_i
 
 browser = Watir::Browser.new :chrome
-browser.goto(URI.escape("https://www.google.co.jp/search?source=lnms&tbm=isch&q=" + keyword))
+browser.goto(URI.escape("https://www.google.co.jp/search?source=lnms&tbm=isch&q=%s" % keyword))
 
 image_urls = []
 saved_images = []
@@ -23,9 +23,14 @@ while saved_images.size < n_images
     # download image
     begin
         file_name = image_urls[i].split("/")[-1]
+        if(not file_name.match(/.jpg|.jpeg|.png|.gif|.bmp/))
+          file_name = file_name.gsub("." + file_name.split(".")[-1], "")
+          file_name = file_name + ".jpeg"
+        end
+
         p "Save to '" + image_urls[i] + "' into '" + file_name + "'"
-        open(image_urls[i]) do |file|
-            open(file_name, "w+b") do |out|
+        open(image_urls[i], "rb") do |file|
+            open(file_name, "wb") do |out|
                 out.write(file.read)
             end
         end
