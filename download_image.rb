@@ -28,7 +28,7 @@ while saved_images.size < n_images
           file_name = file_name + ".jpeg"
         end
 
-        p "Save to '" + image_urls[i] + "' into '" + file_name + "'"
+        p "Save '" + image_urls[i] + "' into '" + file_name + "'"
         open(image_urls[i], "rb") do |file|
             open(file_name, "wb") do |out|
                 out.write(file.read)
