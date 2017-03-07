@@ -20,8 +20,8 @@ brew install chromedriver
 
 
 ### 画像ダウンロード
-以下のコマンドで、指定したキーワードを元に、google画像検索結果上位100件をダウンロードする。
+以下のコマンドで、指定したキーワードを元に、google画像検索結果上位100件をダウンロードする。(jpeg画像のみダウンロードするように修正)
 
 ```
-ruby download_image.rb "猫 犬" 100
+ruby download_image.rb "歩行者 単体" 100
 ```
