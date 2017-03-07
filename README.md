@@ -18,6 +18,10 @@ Google chromeのweb-driverをインストールする。
 brew install chromedriver
 ```
 
+### 保存用ディレクトリを作成
+```
+mkdir downloads
+```
 
 ### 画像ダウンロード
 以下のコマンドで、指定したキーワードを元に、google画像検索結果上位100件をダウンロードする。(jpeg画像のみダウンロードするように修正)
