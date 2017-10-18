@@ -28,6 +28,7 @@ Temporary Items
 .apdisk
 
 
-# JPEG
+# downloaded images
 *.jpeg
 *.jpg
+*.png
